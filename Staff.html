@@ -1,0 +1,236 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gallery</title>
+		<style>
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+  /* Base font size */
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 3.5rem 0;
+  color: #1a1a1a;
+}
+
+.heading span {
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+}
+
+.gallery-item {
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+    margin: 0;
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+  margin: 0;
+  background: #7f84be ;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  font-size: 30px;
+  padding: 30px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 80px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+		</style>
+	</head>
+	<body>
+
+<header>
+    <div class="container">
+      <h1 class="logo">Blood4Life</h1>
+      <nav>
+        <ul>
+          <li><a href="Blood4Life.html">Home</a></li>
+          <li><a href="Staff.html">Staff</a></li>
+          <li><a href="Donation.html">Donate</a>
+          <li><a href="Payment.html">Payment</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+	<div class="container">
+
+  <h1 class="heading">Our Staff</h1>
+
+  <div class="gallery">
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/female-healthcare-workers-smile-at-unseen-person-in-meeting-picture-id1345513653?k=20&m=1345513653&s=612x612&w=0&h=gxaeTd8jRaEdXBKnUR87J0KSD4lOY4FyBDm8rKUGlD4=" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+    </div>
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-picture-id1327024466?b=1&k=20&m=1327024466&s=170667a&w=0&h=vcw4Exhv4pkR8fMVLNXhNESaKq1HbYwJ1iElLlQBxI0=" alt="sunset behind San Francisco city skyline">
+    </div>
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/attractive-female-doctor-smiling-looking-at-camera-while-working-with-picture-id1362359823?k=20&m=1362359823&s=612x612&w=0&h=nvcoH5RTuNOrBb_rtA9K6qmsBRlYS5qNyz7vd3HTFms=" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+    </div>
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/portrait-of-a-handsome-male-nurse-picture-id1306584974?k=20&m=1306584974&s=612x612&w=0&h=UkOVN_Ve1bwxo-pH1nhah3Kx8sdc_JszZGfdMB_x4I4=">
+    </div>
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/shot-of-a-young-male-nurse-in-his-office-picture-id1316049487?k=20&m=1316049487&s=612x612&w=0&h=td2tatmZaqHFvjSVCo_LfBjYkO2qlTrRijQh9koFs-M=" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+    </div>
+
+    <div class="gallery-item">
+      <img class="gallery-image" src="https://media.istockphoto.com/photos/providing-essential-services-picture-id1362936951?k=20&m=1362936951&s=612x612&w=0&h=GLlYt2uFMdXvP1l9ssHzRdyRSpUuHky-tG6tGlMB28Y=" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+    </div>
+
+  </div>
+
+</div>
+
+
+
+	</body>
+	</html>
+	

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blood4Life</title>
+	<style type="text/css">
+		
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #7f84be ;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 40px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+#book{
+    margin-right:150px;
+    margin-left:1000px;
+    background-color:lightblue;
+    font-size:40px;
+    border:5px solid green;
+    padding:100px;
+    margin-top: 10;
+   }
+img{
+	float: left;
+}
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+      <h1 class="logo">Blood4Life</h1>
+      <nav>
+        <ul>
+          <li><a href="Blood4Life.html">Home</a></li>
+          <li><a href="Staff.html">Staff</a></li>
+          <li><a href="Donation.html">Donation</a></li>
+          <li><a href="Payment.html">Payment</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<img src="https://media.giphy.com/media/PgjFfiSWV5DEsXZq61/giphy.gif" width="500" height="600" >
+
+
+
+<form id="book">Sign up for a free check up today!
+	<br>
+<input type="text" name="fname" id="fname" required placeholder="First Name">
+<br>
+<input type="text" name="lname" id="lname" required placeholder="Last Name">
+<br>
+<input type="text" name="fname" id="fname" required placeholder="Email">
+<br>
+<input type="date" name="fname" id="fname" required placeholder="Date">
+<br>
+<input type="number" name="fname" id="fname" required placeholder="Phone Number">
+<br>
+
+<input type="submit" name="submit" onclick="book()">
+
+</form>
+<center><h1>What we do at Blood4life</h1></center>
+<br><p>We are a private hospital that donates blood to other people. If you donate blood we do have a cash plan or you can choose to do it for free, which ever suits you. Help the needy at Blood4life. Donating blood can save peoples lives. This is all for a good cause. Our donation center is at York, Pillsbury hill 15 saint Hibborts Close. We provide 24/7 Ambulances. Free checkups, expert doctors, medicine, bed facility and total care. We can almost garantee you that you will have a calming and recovering expericence at our hospital. </p>
+<script>
+	
+function book(){
+	alert("Your Appointment has been booked.")
+}
+
+</script>
+
+</body>
+</html>
